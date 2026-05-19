@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@600;700&family=Prompt:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #5a341f;
+  background: #fffaf2;
+  font-family: 'Prompt', 'Noto Sans Thai', ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #fffaf2;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 213, 221, 0.68), transparent 34rem),
+    radial-gradient(circle at 92% 8%, rgba(247, 201, 137, 0.38), transparent 28rem),
+    linear-gradient(180deg, #fffaf2 0%, #fff3df 100%);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: #321b11;
+  background: #ffd5dd;
+}
+
+@layer components {
+  .field-label {
+    @apply text-sm font-medium text-cocoa-600;
+  }
+
+  .field-input {
+    @apply w-full rounded-3xl border border-cream-200 bg-white/90 px-4 py-3 text-cocoa-700 outline-none transition placeholder:text-cocoa-500/45 focus:border-rosemilk-300 focus:ring-4 focus:ring-rosemilk-100;
+  }
+
+  .soft-card {
+    @apply rounded-5xl border border-white/80 bg-white/[0.82] shadow-card backdrop-blur;
+  }
+
+  .section-title {
+    @apply text-xl font-semibold tracking-[-0.02em] text-cocoa-700;
+  }
+
+  .table-head {
+    @apply px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-cocoa-500/80;
+  }
+
+  .table-cell {
+    @apply px-4 py-4 text-sm text-cocoa-700;
+  }
+}
